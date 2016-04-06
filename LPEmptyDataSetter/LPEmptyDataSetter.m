@@ -15,7 +15,7 @@
 @interface LPEmptyDataSetter ()
 
 @property (nonatomic, copy) NSString *observeKey;
-@property (nonatomic, assign) UIView *emptySetView;
+@property (nonatomic, strong) UIView *emptySetView;
 @property (nonatomic, assign) CGRect emptySetViewFrame;
 @property (nonatomic, strong) UIViewController *target;
 
@@ -105,11 +105,6 @@
 - (void)setEmptySetter:(LPEmptyDataSetter *)emptySetter
 {
     objc_setAssociatedObject(self, @selector(emptySetter), emptySetter, OBJC_ASSOCIATION_RETAIN);
-}
-
-- (void)dealloc
-{
-    objc_removeAssociatedObjects(self);
 }
 
 @end
