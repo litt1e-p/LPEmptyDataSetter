@@ -67,7 +67,7 @@
         NSDictionary *setDict = set;
         display               = IsVoidDict(setDict);
     } else {
-        display = set;
+        display = (BOOL)set;
     }
     [self renderEmptySetView:display];
 }
