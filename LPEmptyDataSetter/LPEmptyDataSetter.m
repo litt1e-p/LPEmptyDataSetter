@@ -51,6 +51,7 @@
     } else {
         [self.target.view sendSubviewToBack:self.emptySetView];
     }
+    self.emptySetView.hidden = !display;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
