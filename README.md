@@ -40,6 +40,18 @@ placeholder.frame = CGRectMake(150, 200, 80, 80);
 ```swift
 placeholder view is under your view controller's control, you can add some event for it so that you can change the placeholder view dynamically, such as sample project show. enjoy it now!
 ```
+#### One more thing
+
+LPEmptyDataSetter is base on KVO, when your observing key value has changed, please set a new variables for your key:
+```swift
+// if your observing key is "data"
+NSMutableArray *temp = [NSMutableArray arrayWithArray:"array you fetched"];
+//trigger KVO method 1
+self.data = temp;
+//trigger KVO method 2
+[[self mutableArrayValueForKey:@"data"] addObjectsFromArray:"array you fetched"];
+```
+it's similar with other data structure such as NSMutableDictionary/NSDictionary or etc.
 
 # Screenshot
 
