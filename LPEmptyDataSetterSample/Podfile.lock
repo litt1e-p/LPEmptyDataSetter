@@ -1,0 +1,10 @@
+PODS:
+  - LPEmptyDataSetter (0.0.3)
+
+DEPENDENCIES:
+  - LPEmptyDataSetter (~> 0.0.3)
+
+SPEC CHECKSUMS:
+  LPEmptyDataSetter: 3c22c676d97578ccb18e732bfee54fc85ab1be9b
+
+COCOAPODS: 0.39.0
